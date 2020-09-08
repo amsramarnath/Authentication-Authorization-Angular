@@ -1,0 +1,12 @@
+<form class="form-signin box" #f="ngForm" (ngSubmit)="signIn(f.value)">
+  <h1 class="form-signin-heading">Login</h1>
+  <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+  
+  <input type="text" id="inputEmail" name="email" ngModel 
+    class="form-control" placeholder="Email address" required autofocus autocomplete="off">
+ 
+  <input type="text" id="inputPassword" name="password" ngModel 
+    class="form-control" placeholder="Password" required autocomplete="off">
+
+  <button type="submit">Login</button>
+</form>
